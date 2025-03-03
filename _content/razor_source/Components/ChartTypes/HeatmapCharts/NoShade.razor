@@ -2,7 +2,7 @@
     <ApexChart TItem="SupportIncident"
                Title="Incident Severity"
                Options="options"
-                Debug>
+                >
 
         @foreach (var source in incidents.GroupBy(e => e.Source))
         {
@@ -27,6 +27,7 @@
     {
         options = new ApexChartOptions<SupportIncident>
             {
+                Colors = new List<string> { "#0000FF", "#FF0000" },
                 Stroke = new Stroke
                 {
                     Width = 0
